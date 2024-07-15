@@ -9,11 +9,13 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main", "step2" ]
-  pull_request:
-    branches: [ "main", "step2" ]
-    paths:
-      - 'backend/**'
+    branches: 
+      - "main"
+      - "step2"
+  pull_request:    
+    branches: 
+      - "main"
+      - "step2"
 
 defaults:
   run:
