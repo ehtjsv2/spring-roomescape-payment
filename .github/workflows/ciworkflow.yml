@@ -13,10 +13,6 @@ on:
   pull_request:
     branches: [ "step2"]
 
-defaults:
-  run:
-    working-directory: ./backend
-
 jobs:
   build:
 
