@@ -8,7 +8,7 @@ public class CiTest {
 
     @Test
     void test1(){
-        assertThat(true).isFalse();
+        assertThat(true).isTrue();
 
       
       
