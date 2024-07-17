@@ -54,10 +54,10 @@ jobs:
           files: './build/test-results/test/TEST-*.xml'
 
 
-      - name: 실패 테스트결과를 PR에 코멘트로 등록합니다?
+      # - name: 실패 테스트결과를 PR에 코멘트로 등록합니다?
 
-        uses: mikepenz/action-junit-report@v3
-        if: always()
-        with:
-          report_paths: ./build/test-results/**/*.xml
-          token: ${{ github.token }}
+      #   uses: mikepenz/action-junit-report@v3
+      #   if: always()
+      #   with:
+      #     report_paths: ./build/test-results/**/*.xml
+      #     token: ${{ github.token }}
