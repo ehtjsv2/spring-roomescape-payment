@@ -8,10 +8,6 @@ on:
    # paths:
    #   - 'backend/**'
 
-permissions:
-  contents: read
-  pull-requests: write
-
 # defaults:
 #   run:
 #    working-directory: ./backend
@@ -56,3 +52,10 @@ jobs:
         if: always()
         with:
           files: './build/test-results/test/TEST-*.xml'
+
+      - name: 실패 테스트결과를 PR에 코멘트로 등록합니다
+        uses: mikepenz/action-junit-report@v3
+        if: always()
+        with:
+          report_paths: ./build/test-results/**/*.xml
+          token: ${{ github.token }}
